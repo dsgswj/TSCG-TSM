@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+*.pyo
+work_dirs/
+*.egg-info/
+dist/
+build/
+.DS_Store
+
+# Exclude full dataset videos (only demo subset in Fish_demo/)
+tools/data/video_*.mp4
+
+# Fish_demo videos are too large for GitHub, share via cloud drive
+tools/data/Fish_demo/*.mp4

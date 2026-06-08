@@ -1,0 +1,28 @@
+# Python >= 3.8
+# TSCG_TSM: TSM with Spatial-Channel Feature Modulator and Global Response Normalization
+# for Fish Feeding Motivation Evaluation
+
+# Deep Learning Framework
+torch>=2.0.0
+torchvision>=0.15.0
+
+# OpenMMLab Ecosystem
+mmengine>=0.10.0
+mmcv>=2.0.0
+
+# Model Dependencies
+timm>=0.4.12
+einops>=0.7.0
+
+# Data Processing
+numpy>=1.21.0
+opencv-python>=4.5.0
+decord>=0.6.0
+Pillow>=9.0.0
+
+# Evaluation and Statistical Analysis
+scikit-learn>=1.0.0
+scipy>=1.7.0
+
+# Utilities
+tqdm>=4.60.0

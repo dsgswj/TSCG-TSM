@@ -1,0 +1,4 @@
+3 Strong
+2 Medium
+1 Weak
+0 None
