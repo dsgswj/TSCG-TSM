@@ -1,12 +1,13 @@
 # TSCG-TSM
 
-Temporal Shift Module with Spatial-Channel Gated Module (TSCG-TSM) for fish feeding motivation evaluation.
+Temporal-Spatial-Channel-Global enhanced TSM (TSCG-TSM) for fish feeding motivation evaluation.
 
 ## Overview
 
-TSCG-TSM is an improved video action recognition model based on TSM (Temporal Shift Module), enhanced with two key modules:
+TSCG-TSM is an improved video action recognition model based on TSM, enhanced with three key modules:
 
 - **SCGM (Spatial-Channel Gated Module)**: A dual-attention mechanism combining channel attention and spatial attention with gated feature modulation.
+- **TAM (Temporal Attention Module)**: A temporal attention module to dynamically adjust the importance of different frames according to video content.
 - **GRN (Global Response Normalization)**: A feature normalization technique from ConvNeXtV2 that improves feature diversity.
 
 The model classifies fish feeding motivation into 4 levels: None (0), Weak (1), Medium (2), Strong (3).
@@ -19,15 +20,6 @@ The demo dataset used in this project is available at:
 
 Download the dataset and place the video files in `tools/data/`.
 
-## Model Performance
-
-| Metric | Value |
-|--------|-------|
-| Top-1 Accuracy | 86.30% |
-| Top-5 Accuracy | 100% |
-| Mean Accuracy | 86.15% |
-| Parameters | 11.9M |
-
 ## Project Structure
 
 ```
@@ -37,10 +29,10 @@ TSCG-TSM/
 ├── modules/
 │   ├── SCGM.py              # Spatial-Channel Gated Module
 │   └── GRN.py               # Global Response Normalization
-├── mmaction/                # Customized mmaction modules
+├── mmaction/                
 │   ├── models/
 │   │   ├── backbones/
-│   │   │   └── resnet_tsm_scgm_grn.py  # TSCG-TSM backbone
+│   │   │   └── TSCG_TSM.py  # TSCG-TSM backbone
 │   │   └── heads/
 │   │       └── tsm_head.py             # TSM head with temporal attention
 │   ├── datasets/
@@ -54,7 +46,7 @@ TSCG-TSM/
 │   ├── train.py
 │   └── test.py
 ├── weights/
-│   └── best.pth             # Pre-trained weights
+│   └── best.pth             # best weights
 └── requirements.txt
 ```
 
@@ -79,4 +71,3 @@ python tools/train.py configs/TSCG-TSM.py
 ## Acknowledgments
 
 - This project is built upon [MMAction2](https://github.com/open-mmlab/mmaction2). We thank the OpenMMLab team for their excellent framework.
-- GRN module is inspired by [ConvNeXt V2](https://github.com/facebookresearch/ConvNeXt-V2).
