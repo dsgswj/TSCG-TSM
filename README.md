@@ -14,7 +14,7 @@ The model classifies fish feeding motivation into 4 levels: None (0), Weak (1), 
 
 ## Dataset
 
-The demo dataset used in this project is available at:
+The subset dataset used in this project is available at:
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20595836.svg)](https://doi.org/10.5281/zenodo.20595836)
 
@@ -70,4 +70,4 @@ python tools/train.py configs/TSCG-TSM.py
 
 ## Acknowledgments
 
-- This project is built upon [MMAction2](https://github.com/open-mmlab/mmaction2). We thank the OpenMMLab team for their excellent framework.
+- This project is built upon [MMAction2](https://github.com/open-mmlab/mmaction2). We thank the OpenMMLab team for their framework.
