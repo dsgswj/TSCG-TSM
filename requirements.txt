@@ -1,6 +1,4 @@
 # Python >= 3.8
-# TSCG_TSM: TSM with Spatial-Channel Feature Modulator and Global Response Normalization
-# for Fish Feeding Motivation Evaluation
 
 # Deep Learning Framework
 torch>=2.0.0
