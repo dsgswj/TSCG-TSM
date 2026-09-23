@@ -4,6 +4,7 @@ data_root = 'tools/data/'
 
 ann_file_train = 'tools/data/trainlist.txt'
 ann_file_val = 'tools/data/testlist.txt'
+ann_file_test = 'tools/data/testlist.txt'
 
 file_client_args = dict(io_backend='disk')
 
@@ -131,7 +132,7 @@ test_dataloader = dict(
     sampler=dict(type='DefaultSampler', shuffle=False),
     dataset=dict(
         type=dataset_type,
-        ann_file=ann_file_val,
+        ann_file=ann_file_test,
         data_prefix=dict(video=data_root),
         pipeline=test_pipeline,
         test_mode=True))
